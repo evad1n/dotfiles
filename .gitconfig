@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = root
+#	email = root@Evadin-Laptop.localdomain
+[user]
+	name = Will
+	email = willdickinson98@gmail.com
+[core]
+	editor = code
+	excludeFiles = ~/.gitignore_global
+	excludesfile = ~/.gitignore_global
