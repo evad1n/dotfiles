@@ -7,21 +7,21 @@ alias la='ls -Al'
 alias gh='history|grep'
 
 
-alias desktop='cd /mnt/c/Users/willd/Desktop'
+alias desktop='cd /mnt/c/Users/willd/Desktop'o
 alias rust='code /mnt/c/Users/willd/Desktop/testing/rust'
 
 # Functions (basically more powerful aliases)
 
-browser() { cmd.exe /c start "$@"; } 
+browser() { cmd.exe /c start "$@"; }
 mkcd() { mkdir -p "$@" && cd "$@"; }
 
-# Git add all changes and commit 
-gcma() { 
-	if [ $# -eq 0 ]; then
-		echo "Please specify a commit message"
-		return
-	fi
-	git add -A; git commit -m "$@"; 
+# Git add all changes and commit
+gcam() {
+    if [ $# -eq 0 ]; then
+        echo "Please specify a commit message"
+        return
+    fi
+    git add -A; git commit -m "$@";
 }
 
 # Python venv
