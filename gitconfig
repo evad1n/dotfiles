@@ -1,0 +1,10 @@
+[user]
+	name = Will Dickinson
+	email = willdickinson98@gmail.com
+[grep]
+	lineNumber = true
+[core]
+	editor = code
+	excludesfile = ~/.gitignore_global
+[include]
+	path = ~/.gitconfig_local

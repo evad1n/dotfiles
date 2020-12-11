@@ -1,0 +1,18 @@
+# Editor files
+.vscode
+
+# venv
+venv
+
+# npm
+node_modules
+
+# Compiled
+*.exe
+*.o
+*.pyc
+
+# DBs #
+*.sqlite
+*.sqlite3
+*.db
