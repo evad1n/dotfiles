@@ -13,5 +13,9 @@ alias va='source ./venv/bin/activate'
 # Overwriting
 alias mkdir="mkdir -p"
 
+alias gcam="git commit -A -m"
+
+alias install="sudo apt install"
+
 # Functions (basically more powerful aliases)
 mkcd() { mkdir -p "$@" && cd "$@"; }

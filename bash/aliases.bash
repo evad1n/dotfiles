@@ -7,9 +7,6 @@ alias la='ls -Al'
 alias gh='history|grep'
 
 
-alias desktop='cd /mnt/c/Users/willd/Desktop'o
-alias rust='code /mnt/c/Users/willd/Desktop/testing/rust'
-
 # Functions (basically more powerful aliases)
 
 browser() { cmd.exe /c start "$@"; }

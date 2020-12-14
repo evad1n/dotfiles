@@ -1,3 +1,7 @@
+Host ssh-dixie
+    User wdickinson
+    HostName ssh.cs.dixie.edu
+
 Host leghorn
     User wdickinson
     HostName leghorn.cs.dixie.edu
@@ -17,22 +21,3 @@ Host cs3520
     User wdickinson
     HostName cs3520.cs.dixie.edu
     ProxyJump wdickinson@ssh.cs.dixie.edu
-
-Host jenkins-master
-    User ubuntu
-    HostName ec2-18-211-251-145.compute-1.amazonaws.com
-    IdentityFile ~/it4200.pem
-
-Host jenkins-slave
-    User ubuntu
-    HostName ec2-52-71-164-154.compute-1.amazonaws.com
-    IdentityFile ~/it4200.pem
-
-Host docker-vm
-    User ubuntu
-    HostName ec2-54-164-177-143.compute-1.amazonaws.com
-    IdentityFile ~/it4200-start.pem
-
-Host ssh-dixie
-    User wdickinson
-    HostName ssh.cs.dixie.edu

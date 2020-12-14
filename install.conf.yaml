@@ -6,28 +6,24 @@
 - clean: ['~', '~/.oh-my-zsh/custom/']
 
 - shell:
-  - [sh pre-install.sh, Running pre-installation script]
-  - [mkdir]
+  - [./pre-install.sh, Running pre-installation script]
 
 - link:
     ~/.bash:
-    ~/.bash_profile:
-    ~/.bashrc:
+    ~/.bashrc: 
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.tmux.conf:
-    ~/.vim:
-    ~/.vimrc:
-    ~/.zsh: 
     ~/.zshrc:
     ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/aliases.zsh
-
-- create:
-    - ~/downloads
-    - ~/.vim/undo-history
+    ~/.oh-my-zsh/custom/plugins/zsh-completions: oh-my-zsh/plugins/zsh-completions/
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/plugins/zsh-syntax-highlighting/
+    ~/.oh-my-zsh/custom/themes/powerlevel10k: oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+    ~/.p10k.zsh: 
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - []
   - git update-submodules
   - >
     git cleanall -f
