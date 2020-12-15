@@ -1,5 +1,5 @@
 # Check if zsh is installed
-if ! command -v zsh &> /dev/null
+if [ ! $(command -v zsh &> /dev/null) ] 
 then
     echo "zsh not installed. Installing...."
     sudo apt install zsh
@@ -23,8 +23,5 @@ then
   echo 'Installing oh-my-zsh'
   /bin/sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 else
-  echo 'Updating oh-my-zsh'
-#   /usr/bin/zsh -c "omz update"
+  echo 'oh-my-zsh already installed'
 fi
-
-omz update
