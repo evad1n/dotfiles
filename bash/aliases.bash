@@ -9,7 +9,6 @@ alias gh='history|grep'
 
 # Functions (basically more powerful aliases)
 
-browser() { cmd.exe /c start "$@"; }
 mkcd() { mkdir -p "$@" && cd "$@"; }
 
 # Git add all changes and commit

@@ -26,3 +26,10 @@ mkcd() { mkdir -p "$@" && cd "$@"; }
 
 # p10k colors
 p10kcolors() { for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done }
+
+
+
+# Allow local customizations in the ~/.zsh_aliases_local file
+if [ -f ~/.zsh_aliases_local ]; then
+    source ~/.zsh_aliases_local
+fi
