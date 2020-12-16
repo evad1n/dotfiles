@@ -6,7 +6,11 @@
 - clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins']
 
 - shell:
-  - [sh pre-install.sh, Running pre-installation script]
+  - 
+    command: sh pre-install.sh
+    stdout: true
+    description: Running pre-installation script
+    quiet: true
 
 - link:
     ~/.bash:
@@ -23,7 +27,8 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - git update-submodules
   - >
-    git cleanall -f
-    zsh/plugins/
+    git clean -f
+    oh-my-zsh/
+    oh-my-zsh/plugins/
+    oh-my-zsh/themes/

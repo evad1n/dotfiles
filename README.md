@@ -12,4 +12,4 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 ## Vscode with zsh fonts
 install meslo nerd fonts
-change font to meslo regular in vscode intergrate terminal settings
+change font to meslo regular in vscode integrate terminal settings

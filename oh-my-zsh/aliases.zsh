@@ -13,9 +13,15 @@ alias va='source ./venv/bin/activate'
 # Overwriting
 alias mkdir="mkdir -p"
 
-alias gcam="git commit -A -m"
+alias gcAm="gaa; gcmsg"
 
 alias install="sudo apt install"
 
+###############################################
 # Functions (basically more powerful aliases)
+###############################################
+
 mkcd() { mkdir -p "$@" && cd "$@"; }
+
+# p10k colors
+p10kcolors() { for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done }
