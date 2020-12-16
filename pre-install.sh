@@ -1,8 +1,8 @@
 # Check if zsh is installed
 if [ ! $(command -v zsh &> /dev/null) ] 
 then
-    echo "zsh not installed. Installing...."
-    sudo apt install zsh
+  echo "zsh not installed. Installing...."
+  sudo apt install zsh
 else
 	echo "zsh already installed"
 fi
