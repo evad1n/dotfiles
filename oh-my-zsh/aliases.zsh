@@ -10,9 +10,10 @@ alias -g G="| grep"
 alias ve='python3 -m venv ./venv'
 alias va='source ./venv/bin/activate'
 
-# Overwriting
+# Other
 alias mkdir="mkdir -p"
 
+# gcam exists for lower -a
 alias gcAm="gaa; gcmsg"
 
 alias install="sudo apt install"

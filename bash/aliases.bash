@@ -13,13 +13,14 @@ browser() { cmd.exe /c start "$@"; }
 mkcd() { mkdir -p "$@" && cd "$@"; }
 
 # Git add all changes and commit
-gcam() {
-    if [ $# -eq 0 ]; then
-        echo "Please specify a commit message"
-        return
-    fi
-    git add -A; git commit -m "$@";
-}
+alias gcAm="git add -A; git commit -m"
+# gcAm() {
+#     if [ $# -eq 0 ]; then
+#         echo "Please specify a commit message"
+#         return
+#     fi
+#     git add -A; git commit -m "$@";
+# }
 
 # Python venv
 alias ve='python3 -m venv ./venv'
