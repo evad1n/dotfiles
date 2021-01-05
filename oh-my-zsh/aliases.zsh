@@ -29,7 +29,7 @@ p10kcolors() { for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f 
 
 
 
-# Allow local customizations in the ~/.zsh_aliases_local file
-if [ -f ~/.aliases-local.zsh ]; then
-    source ~/.aliases-local.zsh
+# Allow local customizations in the .aliases-local.zsh file
+if [ -f "$ZSH_CUSTOM/aliases-local.zsh" ]; then
+    source "$ZSH_CUSTOM/aliases-local.zsh"
 fi

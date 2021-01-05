@@ -1,16 +1,8 @@
+# Clone into ~/.ssh/config
+
 Host ssh-dixie
     User wdickinson
     HostName ssh.cs.dixie.edu
-
-Host leghorn
-    User wdickinson
-    HostName leghorn.cs.dixie.edu
-    ProxyCommand ssh -l wdickinson ssh.cs.dixie.edu exec nc %h %p
-
-Host it4307
-    User wdickinson
-    HostName 144.38.219.130
-    ProxyCommand ssh -l wdickinson ssh.cs.dixie.edu exec nc %h %p
 
 Host cs3400
     User wdickinson
