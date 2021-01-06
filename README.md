@@ -1,18 +1,16 @@
 # Dotfiles
 
-# TODO
-- [?] automate fonts: fonts will be installed with fonts.sh script
-- [?] powerlevel10k automation
-
-# Powerlevel10k theme
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
-
 ## [Guide](https://github.com/anishathalye/dotbot)
 
-## Vscode with zsh fonts
-install meslo nerd fonts \
-change font to meslo regular in vscode integrate terminal settings
+Just clone and run install script
 
+# Manual Stuff
 
-also do this in gnome terminal
+## Install Fonts
+Inside manual folder run fonts.sh
+
+### Terminal fonts
+Change terminal font in terminal preferences
+
+### Vscode with zsh fonts
+Change font to meslo regular in vscode integrated terminal settings
