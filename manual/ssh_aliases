@@ -3,13 +3,3 @@
 Host ssh-dixie
     User wdickinson
     HostName ssh.cs.dixie.edu
-
-Host cs3400
-    User wdickinson
-    HostName cs3400.cs.dixie.edu
-    ProxyJump wdickinson@ssh.cs.dixie.edu
-
-Host cs3520
-    User wdickinson
-    HostName cs3520.cs.dixie.edu
-    ProxyJump wdickinson@ssh.cs.dixie.edu
