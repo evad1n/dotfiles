@@ -8,3 +8,5 @@
 [user]
 	email = willdickinson98@gmail.com
 	name = Will Dickinson
+[pull]
+	rebase = false
