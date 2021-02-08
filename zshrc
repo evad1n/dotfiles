@@ -82,7 +82,6 @@ plugins=(
     zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -98,6 +97,7 @@ else
     export EDITOR='code'
 fi
 
+source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

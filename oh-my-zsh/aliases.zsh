@@ -1,6 +1,11 @@
 # Editing aliases
 alias etal="$EDITOR $ZSH_CUSTOM/aliases.zsh"
-alias scal="source $ZSH_CUSTOM/aliases.zsh"
+alias etall="$EDITOR $ZSH_CUSTOM/aliases-local.zsh"
+alias scal="source $ZSH_CUSTOM/aliases-local.zsh $ZSH_CUSTOM/aliases.zsh"
+
+# Ls
+alias l="ls -lh"
+alias ll="ls -lah"
 
 # Grep
 alias gh="history|grep"
