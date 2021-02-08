@@ -1,10 +1,12 @@
 # For editing aliases quickly
 alias realias='vim ~/.bash_aliases; source ~/.bash_aliases'
 
-alias ll='ls -l'
+alias l='ls -lh'
+alias ll='ls -lah'
 alias la='ls -Al'
 
-alias gh='history|grep'
+# Grep
+alias gh="history|grep"
 
 
 # Functions (basically more powerful aliases)
