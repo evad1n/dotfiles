@@ -1,7 +1,7 @@
 # Editing aliases
 alias etal="$EDITOR $ZSH_CUSTOM/aliases.zsh"
-alias etall="$EDITOR $HOME/aliases-local.zsh"
-alias scal="source $HOME/aliases-local.zsh $ZSH_CUSTOM/aliases.zsh"
+alias etall="$EDITOR $HOME/.aliases-local.zsh"
+alias scal="source $HOME/.aliases-local.zsh $ZSH_CUSTOM/aliases.zsh"
 
 # Ls
 alias l="ls -lh"
