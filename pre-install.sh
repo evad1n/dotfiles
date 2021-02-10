@@ -3,6 +3,8 @@ if [ ! $(command -v zsh &> /dev/null) ]
 then
 	echo "zsh not installed. Installing...."
 	sudo apt install zsh
+	# Remove default zshrc
+	rm $HOME/.zshrc
 else
 	echo "zsh already installed"
 fi

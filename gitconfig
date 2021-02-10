@@ -7,3 +7,6 @@
 	path = ~/.gitconfig_local
 [pull]
 	rebase = false
+[user]
+	email = willdickinson98@gmail.com
+	name = Will Dickinson
