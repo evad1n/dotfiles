@@ -1,7 +1,7 @@
 [grep]
 	lineNumber = true
 [core]
-	editor = code
+	editor = code -w
 	excludesfile = ~/.gitignore_global
 [include]
 	path = ~/.gitconfig_local
