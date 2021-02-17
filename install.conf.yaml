@@ -8,9 +8,9 @@
 - shell:
   - 
     command: sh pre-install.sh
+    stdin: true
     stdout: true
     description: Running pre-installation script
-    quiet: true
 
 - link:
     ~/.bash:
