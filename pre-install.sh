@@ -1,5 +1,5 @@
-# Check if zsh is installed
-if [ ! $(command -v zsh &> /dev/null) ] 
+# Check if zsh is installed,
+if ! command -v zsh &> /dev/null
 then
 	echo "zsh not installed. Installing...."
 	sudo apt install zsh
@@ -7,15 +7,6 @@ then
 	rm $HOME/.zshrc
 else
 	echo "zsh already installed"
-fi
-
-# Change default shell to zsh
-if [ ! $SHELL = "/usr/bin/zsh" ] 
-then
-	echo 'Changing default shell to zsh'
-	chsh -s $(which zsh)
-else
-	echo 'Already using zsh'
 fi
 
 # Check if oh-my-zsh is installed
@@ -27,3 +18,13 @@ then
 else
 	echo 'oh-my-zsh already installed'
 fi
+
+# OMZ already does this automatically so kkk
+# # Change default shell to zsh
+# if [ ! $SHELL = "/usr/bin/zsh" ] 
+# then
+# 	echo 'Changing default shell to zsh'
+# 	chsh -s $(which zsh)
+# else
+# 	echo 'Already using zsh'
+# fi
