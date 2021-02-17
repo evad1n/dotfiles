@@ -1,0 +1,21 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(dircolors -p | \
+	            sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
+		                    dircolors /dev/stdin)"
+
+# export DISPLAY=":0.0"
+export DISPLAY=$(ip route | awk '/^default/{print $3; exit}'):0
+export LIBGL_ALWAYS_INDIRECT=1
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export GOBIN=$GOPATH/bin
+path+=$GOPATH/bin
+path+=$GOROOT/bin
+
+export ANDROID_SDK=/mnt/d/AndroidSDK
+path+=$ANDROID_SDK/tools
+path+=$ANDROID_SDK/platform-tools
