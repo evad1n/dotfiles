@@ -7,17 +7,17 @@
 
 - shell:
   - 
-    command: sh pre-install.sh
+    command: ./pre-install.sh
     stdin: true
     stdout: true
+    stderr: true
     description: Running pre-installation script
 
 - link:
-    ~/.bash:
-    ~/.bashrc: 
     ~/.gitconfig:
     ~/.gitignore_global:
-    ~/.zshrc-template:
+    ~/.bash:
+    ~/.zsh: 
     ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/aliases.zsh
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: oh-my-zsh/plugins/zsh-autosuggestions/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/plugins/zsh-syntax-highlighting/

@@ -126,8 +126,3 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 ### Fix slowness of pastes
 
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# Read local zshrc
-if [ -f "$HOME/.zshrc" ]; then
-    source "$HOME/.zshrc"
-fi

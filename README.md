@@ -19,6 +19,8 @@ If this doesn't work lookup font name in OS fonts and set it as that
 
 # Local Files
 
+## Maybe need to source templates in default .rc files
+
 ## Aliases
 
 $HOME/.aliases-local.zsh

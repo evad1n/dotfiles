@@ -1,11 +1,10 @@
+#!/bin/bash
+
 # Check if zsh is installed,
-if ! [ -x "$(command -v zsh)" &> /dev/null ]
+if [ type zsh &> /dev/null ]
 then
 	echo "zsh not installed. Installing...."
 	sudo apt install zsh
-	# Remove default zshrc
-	rm $HOME/.zshrc
-	touch $HOME/.zshrc
 else
 	echo "zsh already installed"
 fi
@@ -19,6 +18,12 @@ then
 else
 	echo 'oh-my-zsh already installed'
 fi
+
+# Link to local files
+# Bash
+echo "source $HOME/.bash/include.bash" >> $HOME/.bashrc
+# Zsh
+echo "source $HOME/.zsh/include.zsh" >> $HOME/.zshrc
 
 # OMZ already does this automatically so kkk
 # # Change default shell to zsh
