@@ -127,7 +127,7 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Allow local customizations
-if [ -f "$HOME/.zshrc-local" ]; then
-    source "$HOME/.zshrc-local"
+# Read local zshrc
+if [ -f "$HOME/.zshrc" ]; then
+    source "$HOME/.zshrc"
 fi

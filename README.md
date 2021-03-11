@@ -7,7 +7,7 @@ Just clone and run install script
 # Manual Stuff
 
 ## Install Fonts
-Inside manual folder run fonts.sh
+dsuInside manual folder run fonts.sh
 
 ### Terminal fonts
 Change terminal font in terminal preferences
@@ -25,4 +25,6 @@ $HOME/.aliases-local.zsh
 
 ## Environment Variables
 
-$HOME/.zshrc-local
+$HOME/.zshrc
+
+Tracked ZSH config is in $HOME/.zshrc-template
