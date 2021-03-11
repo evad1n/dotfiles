@@ -6,8 +6,13 @@ Just clone and run install script
 
 # Manual Stuff
 
+## Link to local .rc
+
+manual/link.sh
+
 ## Install Fonts
-dsuInside manual folder run fonts.sh
+
+manual/fonts.sh
 
 ### Terminal fonts
 Change terminal font in terminal preferences
@@ -18,8 +23,6 @@ Change font to meslo regular in vscode integrated terminal settings
 If this doesn't work lookup font name in OS fonts and set it as that
 
 # Local Files
-
-## Maybe need to source templates in default .rc files
 
 ## Aliases
 

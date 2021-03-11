@@ -19,12 +19,6 @@ else
 	echo 'oh-my-zsh already installed'
 fi
 
-# Link to local files
-# Bash
-echo "source $HOME/.bash/include.bash" >> $HOME/.bashrc
-# Zsh
-echo "source $HOME/.zsh/include.zsh" >> $HOME/.zshrc
-
 # OMZ already does this automatically so kkk
 # # Change default shell to zsh
 # if [ ! $SHELL = "/usr/bin/zsh" ] 
