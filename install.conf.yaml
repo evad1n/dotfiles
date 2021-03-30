@@ -3,7 +3,7 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins']
+- clean: ['~', '~/.zsh', '~/.bash','~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins']
 
 - shell:
   - 

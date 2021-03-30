@@ -9,6 +9,7 @@ echo 'Installing oh-my-zsh'
 OMZDIR="$HOME/.oh-my-zsh"
 rm -rf  $OMZDIR
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+# Exit out of omz shell here
 # Remove defualt omz .zshrc
 rm -f $HOME/.zshrc
 
