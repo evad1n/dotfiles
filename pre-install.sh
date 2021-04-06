@@ -1,24 +1,25 @@
 #!/bin/bash
 
-# Install zsh
-echo "Installing zsh..."
-sudo apt install zsh
+# Prompt
+printf "Run pre-install script? (y/n)"
+read RUN_SCRIPT
 
-# Install oh-my-zsh
-echo 'Installing oh-my-zsh'
-OMZDIR="$HOME/.oh-my-zsh"
-rm -rf  $OMZDIR
-sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-# Exit out of omz shell here
-# Remove defualt omz .zshrc
-rm -f $HOME/.zshrc
+if [ $RUN_SCRIPT == "y" ]
+then
+    echo "Running pre-install script"
 
-# OMZ already does this automatically so kkk
-# # Change default shell to zsh
-# if [ ! $SHELL = "/usr/bin/zsh" ] 
-# then
-# 	echo 'Changing default shell to zsh'
-# 	chsh -s $(which zsh)
-# else
-# 	echo 'Already using zsh'
-# fi
+    # Install zsh
+    echo "Installing zsh..."
+    sudo apt install zsh
+
+    # Install oh-my-zsh
+    echo 'Installing oh-my-zsh'
+    OMZDIR="$HOME/.oh-my-zsh"
+    rm -rf  $OMZDIR
+    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    # Exit out of omz shell here
+    # Remove defualt omz .zshrc
+    rm -f $HOME/.zshrc
+else
+    echo "Not running pre-install script"
+fi
