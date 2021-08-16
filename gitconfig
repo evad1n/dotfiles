@@ -10,6 +10,3 @@
 [user]
 	email = willdickinson98@gmail.com
 	name = Will Dickinson
-	signingkey = B4D40E9BBC338001
-[commit]
-	gpgsign = true

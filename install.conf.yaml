@@ -3,32 +3,38 @@
       create: true
       relink: true
 
-- clean: ['~', '~/.zsh', '~/.bash','~/.oh-my-zsh/custom/', '~/.oh-my-zsh/custom/plugins']
+- clean:
+    [
+      "~",
+      "~/.zsh",
+      "~/.bash",
+      "~/.oh-my-zsh/custom/",
+      "~/.oh-my-zsh/custom/plugins",
+    ]
 
 - shell:
-  - 
-    command: ./pre-install.sh
-    stdin: true
-    stdout: true
-    stderr: true
-    description: Running pre-installation script
+    - [git submodule update --init --recursive, Installing submodules]
+    - command: ./pre-install.sh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Running pre-installation script
 
 - link:
     ~/.gitconfig:
     ~/.gitignore_global:
     ~/.bash:
-    ~/.zsh: 
+    ~/.zsh:
     ~/.tmux.conf:
     ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/aliases.zsh
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: oh-my-zsh/plugins/zsh-autosuggestions/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/plugins/zsh-syntax-highlighting/
     ~/.oh-my-zsh/custom/themes/powerlevel10k.zsh-theme: oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-    ~/.p10k.zsh: 
+    ~/.p10k.zsh:
 
 - shell:
-  - [git submodule update --init --recursive, Installing submodules]
-  - >
-    git clean -f
-    oh-my-zsh/
-    oh-my-zsh/plugins/
-    oh-my-zsh/themes/
+    - >
+      git clean -f
+      oh-my-zsh/
+      oh-my-zsh/plugins/
+      oh-my-zsh/themes/
