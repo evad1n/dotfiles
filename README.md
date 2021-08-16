@@ -18,7 +18,7 @@ manual/fonts.sh
 Change terminal font in terminal preferences
 
 ### Vscode with zsh fonts
-Change font to meslo regular in vscode integrated terminal settings
+Change font to "MesloLGS NF" in vscode integrated terminal settings
 
 If this doesn't work lookup font name in OS fonts and set it as that
 
