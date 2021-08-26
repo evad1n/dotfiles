@@ -31,11 +31,20 @@ alias open="xdg-open"
 # Functions (basically more powerful aliases)
 ###############################################
 
-mkcd() { mkdir -p "$@" && cd "$@"; }
+mkcd() { mkdir -p $1 && cd $1; }
 
 # p10k colors
-p10kcolors() { for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done }
+p10kcolors() { 
+    for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done 
+}
 
+git_rm_submodule() {
+    echo "removing submodule $1..."
+    git submodule deinit $1
+    rm -rf .git/modules/$1
+    git rm -f $1
+    rm -rf $1
+}
 
 
 # Allow local customizations in the .aliases-local.zsh file
