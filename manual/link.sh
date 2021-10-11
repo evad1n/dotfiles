@@ -16,3 +16,5 @@ echo "source $HOME/.zsh/include.zsh" >> $HOME/.zshrc
 # Create local aliases file
 echo "Creating local aliases file @ $HOME/.aliases-local.zsh"
 touch $HOME/.aliases-local.zsh
+
+touch $HOME/.gitconfig_local
