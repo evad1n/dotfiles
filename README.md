@@ -33,3 +33,27 @@ $HOME/.aliases-local.zsh
 $HOME/.zshrc
 
 Tracked ZSH config is in $HOME/.zshrc-template
+
+# Other stuff
+
+## Guake
+
+```bash
+sudo apt-get install guake
+```
+
+Prefs:
+
+![](./examples/pictures/guake-general.png)
+
+![](./examples/pictures/guake-main-window.png)
+
+![](./examples/pictures/guake-appearance.png)
+
+
+
+Add shortcut to Ubuntu matching toggle gauke shortcut (Super + Space):
+
+May require you to bind previous Super + Space key. Usually is switching input source key.
+
+Command: `guake-toggle`
