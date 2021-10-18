@@ -42,6 +42,10 @@ Tracked ZSH config is in $HOME/.zshrc-template
 sudo apt-get install guake
 ```
 
+**Current apt version is out of date for double-click tmux fix**
+
+Compile from source: https://guake.readthedocs.io/en/latest/user/installing.html#system-wide-installation
+
 Prefs:
 
 ![](./examples/pictures/guake-general.png)
