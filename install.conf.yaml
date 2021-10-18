@@ -21,7 +21,7 @@
       description: Running pre-installation script
 
 - link:
-    ~/.gitconfig:
+    ~/.gitconfig_base: gitconfig_base
     ~/.gitignore_global:
     ~/.bash:
     ~/.zsh:

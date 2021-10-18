@@ -1,0 +1,7 @@
+[grep]
+	lineNumber = true
+[core]
+	editor = code -w
+	excludesfile = ~/.gitignore_global
+[pull]
+	rebase = false

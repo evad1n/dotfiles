@@ -1,12 +1,5 @@
-[grep]
-	lineNumber = true
-[core]
-	editor = code -w
-	excludesfile = ~/.gitignore_global
 [include]
-	path = ~/.gitconfig_local
-[pull]
-	rebase = false
+	path = ~/.gitconfig_base
 [user]
-	email = willdickinson98@gmail.com
+	email = willdickinson@smartvisionworks.com
 	name = Will Dickinson
