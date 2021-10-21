@@ -19,4 +19,4 @@ touch $HOME/.aliases-local.zsh
 
 # Link gitconfig_base
 echo "\n[include]
-	path = ~/.gitconfig_base" >> ~/.gitconfig   
+	path = ~/.gitconfig_base\n" >> ~/.gitconfig   

@@ -1,5 +1,0 @@
-[include]
-	path = ~/.gitconfig_base
-[user]
-	email = willdickinson@smartvisionworks.com
-	name = Will Dickinson
