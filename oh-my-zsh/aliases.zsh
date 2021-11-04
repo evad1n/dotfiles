@@ -1,7 +1,7 @@
 # Editing aliases
 alias etal="$EDITOR $ZSH_CUSTOM/aliases.zsh"
 alias etall="$EDITOR $HOME/.aliases-local.zsh"
-alias scal="source $HOME/.aliases-local.zsh $ZSH_CUSTOM/aliases.zsh"
+alias sczsh="source $HOME/.zshrc"
 
 # Ls
 alias l="ls -lh"
@@ -26,6 +26,9 @@ alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1
 
 alias install="sudo apt install"
 alias open="xdg-open"
+
+# Docker
+alias dl="docker ps"
 
 ###############################################
 # Functions (basically more powerful aliases)
