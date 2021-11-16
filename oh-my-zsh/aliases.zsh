@@ -24,8 +24,11 @@ alias gcAm="gaa; gcmsg"
 # Delete local untracked/deleted branches
 alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
 
+# System shortcuts
 alias install="sudo apt install"
 alias open="xdg-open"
+# Show disk usage for ext4 fs type
+alias space="df -h -t ext4"
 
 # Docker
 alias dl="docker ps"
