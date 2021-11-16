@@ -1,7 +1,7 @@
 # Editing aliases
 alias etal="$EDITOR $ZSH_CUSTOM/aliases.zsh"
 alias etall="$EDITOR $HOME/.aliases-local.zsh"
-alias sczsh="source $HOME/.zshrc"
+alias sc="source $HOME/.zshrc"
 
 # Ls
 alias l="ls -lh"
@@ -52,6 +52,9 @@ git_rm_submodule() {
     rm -rf $1
 }
 
+image_size() {
+	docker inspect $1 --format='{{.Size}}' | numfmt --to=si
+}
 
 # Allow local customizations in the .aliases-local.zsh file
 if [ -f "$HOME/.aliases-local.zsh" ]; then
