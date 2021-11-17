@@ -50,10 +50,23 @@ git_rm_submodule() {
     rm -rf .git/modules/$1
     git rm -f $1
     rm -rf $1
-}
+} 
 
+# Show image size
 image_size() {
 	docker inspect $1 --format='{{.Size}}' | numfmt --to=si
+}
+
+# Show biggest files
+bigf() {
+    num=${2:-20}
+    find $1 -type f -exec du -ah {} + | sort -nr | head -n $num
+}
+
+# Show biggest directories and files
+bigd() {
+    num=${2:-20}
+    du -ah $1 | sort -nr | head -n $num
 }
 
 # Allow local customizations in the .aliases-local.zsh file
