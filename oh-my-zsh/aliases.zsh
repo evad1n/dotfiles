@@ -60,13 +60,13 @@ image_size() {
 # Show biggest files
 bigf() {
     num=${2:-20}
-    find $1 -type f -exec du -ah {} + | sort -nr | head -n $num
+    find $1 -type f -exec du -ah {} + | sort -hr | head -n $num
 }
 
 # Show biggest directories and files
 bigd() {
     num=${2:-20}
-    du -ah $1 | sort -nr | head -n $num
+    du -ah $1 | sort -hr | head -n $num
 }
 
 # Allow local customizations in the .aliases-local.zsh file
