@@ -12,6 +12,8 @@ alias ll="ls -lah"
 # Grep
 alias gh="history|grep"
 alias -g G="| grep"
+# git submodule update --recursive
+alias gsur="gsu --recursive"
 
 # Python venv
 alias ve='python3 -m venv ./venv'
@@ -31,8 +33,13 @@ alias open="xdg-open"
 # Show disk usage for ext4 fs type
 alias space="df -h -t ext4"
 
+# Listening ports
+alias ports="lsof -i -P -n | grep LISTEN"
+
 # Docker
+alias dc="docker-compose"
 alias dl="docker ps"
+alias dn="docker network"
 
 ###############################################
 # Functions (basically more powerful aliases)
@@ -46,10 +53,14 @@ p10kcolors() {
     for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done 
 }
 
+# GIT
+
 # Delete local untracked/deleted branches
+# $1 - git branch {}
 git_remove_untracked() {
+    delete=${1:--d}
     git fetch --prune
-    git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d
+    git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch $delete
 }
 
 # $1 - submodule name
@@ -68,11 +79,26 @@ git_rename_master_main() {
     git remote set-head origin -a
 }
 
+# DOCKER
+
 # Show image size
 # $1 - image name
 image_size() {
 	docker inspect $1 --format='{{.Size}}' | numfmt --to=si
 }
+
+# Remove containers by name pattern
+# $1 - name pattern
+drm_name() {
+    docker rm -f $(docker ps -q --filter name=$1)
+}
+
+# Kill and remove all docker containers
+dkill() {
+    docker rm -f $(docker ps -q)
+}
+
+# OTHER
 
 # Show biggest files
 # $1 - search directory
