@@ -79,6 +79,11 @@ git_rename_master_main() {
     git remote set-head origin -a
 }
 
+git_overwrite_tag() {
+    echo tag $1
+    git tag -f $1 && gp origin -d $1 && gp origin $1
+}
+
 # DOCKER
 
 # Show image size
