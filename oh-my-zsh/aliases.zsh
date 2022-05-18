@@ -58,9 +58,9 @@ p10kcolors() {
 # Delete local untracked/deleted branches
 # $1 - git branch {}
 git_remove_untracked() {
-    delete=${1:--d}
+    local DELETE=${1:--d}
     git fetch --prune
-    git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch $delete
+    git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch $DELETE
 }
 
 # $1 - submodule name
@@ -109,16 +109,22 @@ dkill() {
 # $1 - search directory
 # $2 - num files to show (default 20)
 bigf() {
-    num=${2:-20}
-    find $1 -type f -exec du -ah {} + | sort -hr | head -n $num
+    local NUM=${2:-20}
+    find $1 -type f -exec du -ah {} + | sort -hr | head -n $NUM
 }
 
 # Show biggest directories and files
 # $1 - search directory
 # $2 - num files to show (default 20)
 bigd() {
-    num=${2:-20}
-    du -ah $1 | sort -hr | head -n $num
+    local NUM=${2:-20}
+    du -ah $1 | sort -hr | head -n $NUM
+}
+
+# Uses network manager
+get_dns() {
+    local CONN=$(nmcli -t --fields NAME con show --active | head -n 1)
+    nmcli --fields ipv4.dns,ipv6.dns con show "$CONN"
 }
 
 # Allow local customizations in the .aliases-local.zsh file
