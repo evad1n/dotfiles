@@ -57,7 +57,7 @@ p10kcolors() {
 
 # Delete local untracked/deleted branches
 # $1 - git branch {}
-git_remove_untracked() {
+git_rm_untracked() {
     local DELETE=${1:--d}
     git fetch --prune
     git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch $DELETE
@@ -125,6 +125,12 @@ bigd() {
 get_dns() {
     local CONN=$(nmcli -t --fields NAME con show --active | head -n 1)
     nmcli --fields ipv4.dns,ipv6.dns con show "$CONN"
+}
+
+# Print SSL info
+# $1 - website domain
+get_ssl_cert() {
+    openssl s_client -connect $1:443 </dev/null 2>/dev/null | openssl x509 -inform pem -text
 }
 
 # Allow local customizations in the .aliases-local.zsh file
