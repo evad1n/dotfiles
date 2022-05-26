@@ -12,8 +12,14 @@ alias ll="ls -lah"
 # Grep
 alias gh="history|grep"
 alias -g G="| grep"
+
+# Git
 # git submodule update --recursive
 alias gsur="gsu --recursive"
+# gcam exists for lower -a
+alias gcAm="gaa; gcmsg"
+alias gbat="git for-each-ref --sort='-committerdate:iso8601' --format='%(committerdate:relative)|%(refname:short)|%(committername)' refs/ | column -s '|' -t"
+alias gsus="git submodule status"
 
 # Python venv
 alias ve='python3 -m venv ./venv'
@@ -21,11 +27,6 @@ alias va='source ./venv/bin/activate'
 
 # Other
 alias mkdir="mkdir -p"
-
-# gcam exists for lower -a
-alias gcAm="gaa; gcmsg"
-alias gbat="git for-each-ref --sort='-committerdate:iso8601' --format='%(committerdate:relative)|%(refname:short)|%(committername)' refs/ | column -s '|' -t"
-alias gsus="git submodule status"
 
 # System shortcuts
 alias install="sudo apt install"
@@ -37,7 +38,7 @@ alias space="df -h -t ext4"
 alias ports="lsof -i -P -n | grep LISTEN"
 
 # Docker
-alias dc="docker-compose"
+alias dc="docker compose"
 alias dl="docker ps"
 alias dn="docker network"
 
@@ -46,7 +47,9 @@ alias dn="docker network"
 ###############################################
 
 # $1 - dir name
-mkcd() { mkdir -p $1 && cd $1; }
+mkcd() { 
+    mkdir -p $1 && cd $1
+}
 
 # p10k colors
 p10kcolors() { 
@@ -59,7 +62,7 @@ p10kcolors() {
 # $1 - git branch {}
 git_rm_untracked() {
     local DELETE=${1:--d}
-    git fetch --prune
+    git fetch --all --prune --jobs=10
     git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch $DELETE
 }
 
