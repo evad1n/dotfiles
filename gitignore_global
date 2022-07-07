@@ -13,6 +13,7 @@ node_modules
 
 # Compiled
 *.exe
+*.bin
 *.o
 *.pyc
 
