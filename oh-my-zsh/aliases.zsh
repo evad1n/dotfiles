@@ -1,3 +1,19 @@
+DARWIN=false && [[ $(uname) == "Darwin" ]] && DARWIN=true
+# OS specific
+if $DARWIN
+then
+    alias install="brew install"
+else
+    alias install="sudo apt install"
+    alias open="xdg-open"
+
+    # Uses network manager
+    get_dns() {
+        local CONN=$(nmcli -t --fields NAME con show --active | head -n 1)
+        nmcli --fields ipv4.dns,ipv6.dns con show "$CONN"
+    }
+fi
+
 # Editing aliases
 alias etal="$EDITOR $ZSH_CUSTOM/aliases.zsh"
 alias etall="$EDITOR $HOME/.aliases-local.zsh"
@@ -10,7 +26,7 @@ alias l="ls -lh"
 alias ll="ls -lah"
 
 # Grep
-alias gh="history|grep"
+alias gh="history | grep -i"
 alias -g G="| grep"
 
 # Git
@@ -28,9 +44,6 @@ alias va='source ./venv/bin/activate'
 # Other
 alias mkdir="mkdir -p"
 
-# System shortcuts
-alias install="sudo apt install"
-alias open="xdg-open"
 # Show disk usage for ext4 fs type
 alias space="df -h -t ext4"
 
@@ -122,12 +135,6 @@ bigf() {
 bigd() {
     local NUM=${2:-20}
     du -ah $1 | sort -hr | head -n $NUM
-}
-
-# Uses network manager
-get_dns() {
-    local CONN=$(nmcli -t --fields NAME con show --active | head -n 1)
-    nmcli --fields ipv4.dns,ipv6.dns con show "$CONN"
 }
 
 # Print SSL info

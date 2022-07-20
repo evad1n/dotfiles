@@ -1,13 +1,16 @@
 # For editing aliases quickly
-alias realias='vim ~/.bash_aliases; source ~/.bash_aliases'
+alias etal='$EDITOR $HOME/.bash/aliases.bash'
+alias etall='$EDITOR $HOME/.aliases-local.bash'
+alias catal='cat $HOME/.bash/aliases.bash'
+alias catall='cat $HOME/.aliases-local.bash'
+alias sc='source $HOME/.bashrc'
 
 alias l='ls -lh'
 alias ll='ls -lah'
 alias la='ls -Al'
 
 # Grep
-alias gh="history|grep"
-
+alias gh="history | grep -i"
 
 # Functions (basically more powerful aliases)
 
@@ -23,12 +26,7 @@ gcAm() {
     git add -A; git commit -m "$@";
 }
 
-# Python venv
-alias ve='python3 -m venv ./venv'
-alias va='source ./venv/bin/activate'
-
-
-# Allow local customizations in the ~/.bash_aliases_local file
-if [ -f ~/.bash_aliases_local ]; then
-    source ~/.bash_aliases_local
+# Allow local customizations in the ~/.aliases-local.bash file
+if [ -f ~/.aliases-local.bash ]; then
+    source ~/.aliases-local.bash
 fi

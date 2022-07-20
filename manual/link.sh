@@ -11,9 +11,12 @@ echo "source $BASH_INCLUDE_PATH" >> $HOME/.bashrc
 
 # Zsh
 echo "Added line 'source $ZSH_INCLUDE_PATH' to $HOME/.zshrc"
-echo "source $HOME/.zsh/include.zsh" >> $HOME/.zshrc
+echo "source $ZSH_INCLUDE_PATH" >> $HOME/.zshrc
 
-# Create local aliases file
+# Create local aliases files
+echo "Creating local aliases file @ $HOME/.aliases-local.bash"
+touch $HOME/.aliases-local.bash
+
 echo "Creating local aliases file @ $HOME/.aliases-local.zsh"
 touch $HOME/.aliases-local.zsh
 
