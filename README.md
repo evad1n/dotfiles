@@ -14,6 +14,8 @@ manual/link.sh
 
 manual/fonts.sh
 
+[Direct install on mac](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
+
 ### Terminal fonts
 
 Change terminal font in terminal preferences
