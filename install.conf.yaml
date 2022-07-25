@@ -29,8 +29,7 @@
     ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/aliases.zsh
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: oh-my-zsh/plugins/zsh-autosuggestions/
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: oh-my-zsh/plugins/zsh-syntax-highlighting/
-    ~/.oh-my-zsh/custom/themes/powerlevel10k.zsh-theme: oh-my-zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-    ~/.p10k.zsh:
+    ~/.config/starship.toml: starship.toml
 
 - shell:
     - >

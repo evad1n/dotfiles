@@ -1,0 +1,21 @@
+# https://starship.rs/config
+
+right_format = """
+$battery\
+$time
+"""
+
+[directory]
+style = "bold fg:202"
+truncate_to_repo = false
+
+[git_branch]
+style = "bold fg:220"
+
+[time]
+disabled = false
+style = "bold cyan"
+
+[[battery.display]]
+threshold = 30
+style = "bold red"

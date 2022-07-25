@@ -22,6 +22,8 @@ Change terminal font in terminal preferences
 
 ### Vscode with zsh fonts
 
+Need a nerd font.
+
 Change font to "MesloLGS NF" in vscode integrated terminal settings
 
 If this doesn't work lookup font name in OS fonts and set it as that
@@ -30,6 +32,10 @@ If this doesn't work lookup font name in OS fonts and set it as that
 "editor.fontFamily": "MesloLGS NF",
 "terminal.integrated.fontFamily": "MesloLGS NF",
 ```
+
+# Starship config
+
+Install starship (simple brew/apt install)
 
 # Local Files
 
@@ -70,5 +76,7 @@ May require you to bind previous Super + Space key. Usually is switching input s
 Command: `guake-toggle`
 
 # Mac
+
+Just use iTerm2 as Guake replacement.
 
 https://www.howtogeek.com/337861/instantly-open-a-full-screen-terminal-on-your-mac-using-a-keyboard-shortcut/
