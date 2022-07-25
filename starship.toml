@@ -1,8 +1,12 @@
 # https://starship.rs/config
 
-right_format = """
+format = """
+$all\
+$fill\
 $battery\
-$time
+$time\
+$line_break\
+$character
 """
 
 [directory]
@@ -14,8 +18,12 @@ style = "bold fg:220"
 
 [time]
 disabled = false
-style = "bold cyan"
+format = "[$time]($style)"
+style = "bold bright-black"
 
 [[battery.display]]
 threshold = 30
 style = "bold red"
+
+[fill]
+symbol = " "
