@@ -27,3 +27,6 @@ style = "bold red"
 
 [fill]
 symbol = " "
+
+[aws]
+disabled = true
