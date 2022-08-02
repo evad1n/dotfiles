@@ -69,9 +69,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git 
-    zsh-syntax-highlighting 
     zsh-autosuggestions
+    zsh-syntax-highlighting 
+
+    git 
     docker-compose
 )
 
@@ -102,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 
 ### Fix slowness of pastes with zsh-syntax-highlighting.zsh
 pasteinit() {
