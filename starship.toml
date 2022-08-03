@@ -12,6 +12,10 @@ $character
 [directory]
 style = "bold fg:202"
 truncate_to_repo = false
+repo_root_style = "bold fg:210"
+# Disable truncation
+truncation_length = 0
+truncation_symbol = ".../"
 
 [git_branch]
 style = "bold fg:220"
