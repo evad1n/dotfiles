@@ -2,7 +2,7 @@
 
 format = """
 $all\
-$fill\
+$fill \
 $battery\
 $time\
 $line_break\
@@ -30,7 +30,7 @@ threshold = 30
 style = "bold red"
 
 [fill]
-symbol = " "
+symbol = "~"
 
 [aws]
 disabled = true
