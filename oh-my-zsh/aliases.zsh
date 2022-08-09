@@ -1,3 +1,4 @@
+# Short-circuits to false when not on Darwin OS
 DARWIN=false && [[ $(uname) == "Darwin" ]] && DARWIN=true
 # OS specific
 if $DARWIN
@@ -21,25 +22,25 @@ alias catal="cat $ZSH_CUSTOM/aliases.zsh"
 alias catall="cat $HOME/.aliases-local.zsh"
 alias sc="source $HOME/.zshrc"
 
-# Ls
+# Print all defined functions that don't begin with underscore
+# Use 'which' to see the definition
+alias show_functions="print -l ${(ok)functions[(I)[^_]*]}"
+
+# ls
 alias l="ls -lh"
 alias ll="ls -lah"
 
-# Grep
+# grep
 alias gh="history | grep -i"
 alias -g G="| grep"
 
-# Git
+# git
 # git submodule update --recursive
 alias gsur="gsu --recursive"
 # gcam exists for lower -a
 alias gcAm="gaa; gcmsg"
 alias gbat="git for-each-ref --sort='-committerdate:iso8601' --format='%(committerdate:relative)|%(refname:short)|%(committername)' refs/ | column -s '|' -t"
 alias gsus="git submodule status"
-
-# Python venv
-alias ve='python3 -m venv ./venv'
-alias va='source ./venv/bin/activate'
 
 # Other
 alias mkdir="mkdir -p"
