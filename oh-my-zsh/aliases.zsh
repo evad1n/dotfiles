@@ -22,10 +22,6 @@ alias catal="cat $ZSH_CUSTOM/aliases.zsh"
 alias catall="cat $HOME/.aliases-local.zsh"
 alias sc="source $HOME/.zshrc"
 
-# Print all defined functions that don't begin with underscore
-# Use 'which' to see the definition
-alias show_functions="print -l ${(ok)functions[(I)[^_]*]}"
-
 # ls
 alias l="ls -lh"
 alias ll="ls -lah"
@@ -33,6 +29,7 @@ alias ll="ls -lah"
 # grep
 alias gh="history | grep -i"
 alias -g G="| grep"
+alias fng="list_functions | grep -i"
 
 # git
 # git submodule update --recursive
@@ -59,6 +56,12 @@ alias dn="docker network"
 ###############################################
 # Functions (basically more powerful aliases)
 ###############################################
+
+# Print all defined functions that don't begin with underscore
+# Use 'which' to see the definition
+list_functions() {
+    print -l ${(ok)functions[(I)[^_]*]}
+}
 
 # $1 - dir name
 mkcd() { 
@@ -89,7 +92,7 @@ git_rm_submodule() {
     rm -rf $1
 }
 
-git_rename_master_main() {
+git_rename_master_to_main() {
     git branch -m master main
     git fetch origin
     git branch -u origin/main main
