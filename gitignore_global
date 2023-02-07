@@ -25,3 +25,5 @@ node_modules
 
 # Misc
 tmp
+
+.DS_STORE
