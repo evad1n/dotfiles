@@ -53,6 +53,10 @@ alias dc="docker compose"
 alias dl="docker ps"
 alias dn="docker network"
 
+alias git_code="GIT_EDITOR='code -w' git"
+
+alias p="pnpm"
+
 ###############################################
 # Functions (basically more powerful aliases)
 ###############################################
@@ -120,7 +124,7 @@ drm_name() {
 
 # Kill and remove all docker containers
 dkill() {
-    docker rm -f $(docker ps -q)
+    docker rm -f $(docker ps -qa)
 }
 
 # OTHER
