@@ -48,6 +48,8 @@ alias space="df -h -t ext4"
 # Listening ports
 alias ports="lsof -i -P -n | grep LISTEN"
 
+alias rmnm="rm -rf node_modules"
+
 # Docker
 alias dc="docker compose"
 alias dl="docker ps"
@@ -149,6 +151,12 @@ bigd() {
 # $1 - website domain
 get_ssl_cert() {
     openssl s_client -connect $1:443 </dev/null 2>/dev/null | openssl x509 -inform pem -text
+}
+
+# Remove yarn global modules
+yarn_global_remove_all() {
+    # https://github.com/yarnpkg/yarn/issues/1048#issuecomment-758291289
+    yarn global remove $(yarn global list | grep info | sed 's/^info "\(.*\)@.*".*$/\1/')
 }
 
 # Allow local customizations in the .aliases-local.zsh file
