@@ -136,7 +136,8 @@ dkill() {
 # $2 - num files to show (default 20)
 bigf() {
     local NUM=${2:-20}
-    find $1 -type f -exec du -ah {} + | sort -hr | head -n $NUM
+    local DIR=${1:-.}
+    find $DIR -type f -exec du -ah {} + | sort -hr | head -n $NUM
 }
 
 # Show biggest directories and files
@@ -157,6 +158,14 @@ get_ssl_cert() {
 yarn_global_remove_all() {
     # https://github.com/yarnpkg/yarn/issues/1048#issuecomment-758291289
     yarn global remove $(yarn global list | grep info | sed 's/^info "\(.*\)@.*".*$/\1/')
+}
+
+# Open a new tmux window with a larger history limit
+# https://stackoverflow.com/questions/18760281/how-do-i-increase-the-scrollback-buffer-size-in-tmux
+# $1 - history limit (default 10000)
+more_history() {
+    local LIMIT=${1:-10000}
+    tmux set-option history-limit $LIMIT \; new-window
 }
 
 # Allow local customizations in the .aliases-local.zsh file
