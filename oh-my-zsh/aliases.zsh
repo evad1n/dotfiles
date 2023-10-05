@@ -98,6 +98,11 @@ git_rm_submodule() {
     rm -rf $1
 }
 
+# Delete files deleted by us in a merge conflict
+git_rm_deleted_by_us() {
+    git rm `git status | grep "deleted by us" | awk '{print $4}'`
+}
+
 git_rename_master_to_main() {
     git branch -m master main
     git fetch origin
