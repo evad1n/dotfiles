@@ -83,7 +83,7 @@ list_colors() {
 
 # Delete local untracked/deleted branches
 # $1 - git branch {}
-git_rm_untracked() {
+git_branch_rm_untracked() {
     local DELETE=${1:--d}
     git fetch --all --prune --jobs=10
     git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch $DELETE
