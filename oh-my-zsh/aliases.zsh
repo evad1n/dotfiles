@@ -173,6 +173,11 @@ more_history() {
     tmux set-option history-limit $LIMIT \; new-window
 }
 
+# Copy all .env files to a new directory for transfer
+copy_envs() {
+    mkdir envs && find . -maxdepth 2 -name "*.env" -exec sh -c 'cp "$1" "envs/$(basename $(dirname "$1")).env"' _ {} \;
+}
+
 # Allow local customizations in the .aliases-local.zsh file
 if [ -f "$HOME/.aliases-local.zsh" ]; then
     source "$HOME/.aliases-local.zsh"
