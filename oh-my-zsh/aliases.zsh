@@ -103,6 +103,11 @@ git_rm_deleted_by_us() {
     git rm `git status | grep "deleted by us" | awk '{print $4}'`
 }
 
+# Delete files deleted by them in a merge conflict
+git_rm_deleted_by_them() {
+    git rm `git status | grep "deleted by them" | awk '{print $4}'`
+}
+
 git_rename_master_to_main() {
     git branch -m master main
     git fetch origin

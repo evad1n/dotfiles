@@ -1,6 +1,7 @@
 # Env variables
 .env
 .ENV
+.env.temp.*
 
 # Editor files
 .vscode
