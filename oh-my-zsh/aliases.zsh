@@ -27,11 +27,12 @@ alias l="ls -lh"
 alias ll="ls -lah"
 
 # grep
-alias gh="history | grep -i"
+alias GH="history | grep -i"
 alias -g G="| grep"
 alias fng="list_functions | grep -i"
 
 # git
+alias gfaa="gfa && git_branch_rm_untracked"
 # git submodule update --recursive
 alias gsur="gsu --recursive"
 # gcam exists for lower -a
@@ -80,6 +81,13 @@ list_colors() {
 }
 
 # GIT
+
+# Shortcut for after your branch is merged
+gmain() {
+    git checkout main
+    git pull
+    gfaa
+}
 
 # Delete local untracked/deleted branches
 # $1 - git branch {}
@@ -157,6 +165,13 @@ bigd() {
     local NUM=${2:-20}
     du -ah $1 | sort -hr | head -n $NUM
 }
+
+# Kill process by port
+# $1 - port number
+kill_port() {
+    kill -9 $(lsof -t -i tcp:$1)
+}
+
 
 # Print SSL info
 # $1 - website domain
